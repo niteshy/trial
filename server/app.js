@@ -5,6 +5,7 @@ const express = require('express');
 // Create Express app
 const app = express();
 const cors = require('cors')
+const PORT = process.env.SERVER_PORT || 8000;
 
 app.use(cors())
 //TODO 1:
@@ -36,6 +37,6 @@ app.get('/', (request, response) => {
 require('./routes/routes.js')(app);
 
 // Listen for server requests
-app.listen(process.env.SERVER_PORT, () => {
-    console.log(`Express server is listening on Port ${process.env.SERVER_PORT}`)
+app.listen(PORT, () => {
+    console.log(`Express server is listening on Port ${PORT}`)
 });

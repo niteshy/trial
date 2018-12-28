@@ -7,7 +7,7 @@ import '../../App.css';
 import Menu from '../../components/menu/menu';
 import Form from '../../components/searchForm/form';
 
-var getAllSpecialties = `http://localhost:3000/specialties`;
+var getAllSpecialties = `http://localhost:8000/specialties`;
 
 class Specialty extends React.Component {
   constructor(props) {

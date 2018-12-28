@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../App.css';
 
 //Defining URL for API request
-var findSurgeonsURL = `http://localhost:3000/surgeons?`;
+var findSurgeonsURL = `http://localhost:8000/surgeons?`;
 
 class Form extends Component {
   constructor() {
@@ -50,7 +50,7 @@ class Form extends Component {
 
   handleSubmit (event) {
     console.log("Location that is sent to url",this.state.location)
-    var findSurgeonsURL = `http://localhost:3000/surgeons?`;
+    var findSurgeonsURL = `http://localhost:8000/surgeons?`;
     findSurgeonsURL = `${findSurgeonsURL}location=${this.state.location}&specialty=${this.state.specialty}`;
     
     // API call to find surgeons by location and specialty
